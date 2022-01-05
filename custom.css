@@ -1,0 +1,540 @@
+/****************** GENERELLE REGLER *********************/
+html {
+  --primary: #000;
+  --secondary: #042c48;
+  --third: #f2efec;
+  --fourth: #becdda;
+  --fifth: #d1ba9c;
+  --sixth: #fff;
+
+  --generalText: "Lato", sans-serif;
+
+  background-color: var(--sixth);
+}
+
+/* SIDEBAR SAT TIL 0 MARGIN, ELLERS KAN MAN IKKE ORDNE DET */
+.elementor-37 .elementor-element.elementor-element-68a6893 {
+  margin-bottom: 0px;
+}
+/****************** SLUT GENERELLE REGLER *********************/
+
+/******************* DROPDOWN MENU ***************/
+/* selve containeren får display flex for at den ligger sig vandret */
+.dropdown-menu {
+  display: flex;
+  gap: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+/* Dropdown Button og styling af to knapper */
+.dropbtn-categori,
+.dropbtn-kategori,
+.dropbtn-kategori2,
+.produkt_tilføj,
+.tilføj_single {
+  background-color: var(--secondary);
+  color: var(--sixth);
+  font-family: var(--generalText);
+  padding-inline: 7px;
+  padding-block: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+}
+
+/* Hover på knapper */
+.dropbtn-categori:hover,
+.dropbtn-kategori:hover,
+.dropbtn-kategori2:hover,
+.produkt_tilføj:hover,
+.tilføj_single:hover {
+  background-color: var(--fourth);
+  color: var(--primary);
+}
+
+/* containeren <div> får reglen  position relative */
+.dropbtn-categori,
+.dropbtn-kategori,
+.dropbtn-kategori2 {
+  position: relative;
+  display: inline-block;
+}
+
+/* containeren rykker til ud fra siden */
+.dropbtn-categori {
+  margin-left: 4rem;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--sixth);
+  min-width: 100px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+}
+
+/* Linksene inde i dropdown */
+.dropdown-content div {
+  color: var(--primary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+/* vis dropdown menuen når man hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/******************* DROPDOWN MENU SLUT ***************/
+
+/******************* KNAPPER ***************/
+/* styling af produkt_tilføj knap på produktside */
+.produkt_tilføj {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+/******************* KNAPPER SLUT ***************/
+
+/******************* BREADCRUMB STI ***************/
+/* placering af brødkrummesti */
+.breadcrumb {
+  margin-top: 15rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+/* styling på ord */
+ul.breadcrumb li a {
+  color: var(--primary);
+  font-family: var(--generalText);
+}
+
+/* styling af pil mellem links */
+ul.breadcrumb li + li:before {
+  color: var(--primary);
+  padding-right: 2rem;
+  content: ">";
+}
+
+/* styling med underlinje */
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+/******************* BREADCRUMB STI SLUT ***************/
+
+/******************* KLASSE TIL POPUP SINGLEVIEW ***************/
+.hidden {
+  display: none;
+}
+/******************* SLUT KLASSER TIL POPUP SINGLEVIEW ***************/
+
+/******************* STYLING TIL POPUP SINGLEVIEW ***************/
+/* placering af container og generel styling af kassen */
+#popup_produkter {
+  position: fixed;
+  top: 58rem;
+  right: 2rem;
+  background-color: var(--third);
+  width: 23vh;
+  height: 14vh;
+  line-height: 1.5rem;
+  margin-left: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-right: 0rem;
+  padding-left: 1rem;
+}
+
+/* styling h3 */
+#popup_produkter h3 {
+  text-align: center;
+  padding-top: 1rem;
+  font-family: var(--generalText);
+  color: var(--primary);
+  font-size: 14px;
+}
+/******************* SLUT STYLING TIL POPUP SINGLEVIEW ***************/
+
+/****************** MOBILE REGLER *********************/
+/***** styling *****/
+.specifikationer_dropdown,
+.div_single,
+.levering_dropdown {
+  color: var(--primary);
+  font-family: var(--generalText);
+  font-size: 14px;
+}
+
+/***** styling *****/
+.beskrivelse_single p {
+  font-weight: 350;
+  font-size: 15px;
+}
+
+/***** styling *****/
+.titel_single {
+  color: var(--secondary);
+  font-family: var(--generalText);
+  font-size: 25px;
+  margin-top: 2rem;
+  font-weight: 350;
+}
+
+/***** styling *****/
+#oplysninger_section p {
+  margin-top: 2rem;
+}
+
+/***** styling *****/
+.produkt_detaljer div,
+.produkt_detaljer_levering div {
+  width: 23px;
+  height: 1px;
+  margin: 5px;
+  background-color: var(--primary);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.line2,
+.line2_levering {
+  transform: rotate(90deg) translate(0px, 33px);
+}
+
+/***** placering og pointer *****/
+#oplysninger_section,
+#levering_section {
+  display: flex;
+  cursor: pointer;
+}
+
+/***** placering *****/
+.produkt_detaljer,
+.produkt_detaljer_levering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+/***** styling *****/
+.produkt_detaljer_levering {
+  margin-top: -2rem;
+}
+
+figure {
+  display: grid;
+}
+
+.image {
+  grid-area: 1/1;
+}
+
+.image_overlay {
+  grid-area: 1/1;
+  place-self: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+/********* FORSIDE **************/
+
+.hero_overskrift {
+  margin-top: 8rem;
+}
+
+/******************* PRODUKTER I LOOPVIEW OG ANDRE PRODUKTER I MINI LOOPVIEW PÅ SINGLEVIEW GRID ***************/
+#produkter-oversigt,
+#andre_produkter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  padding-inline: 4rem;
+  margin-bottom: 5rem;
+}
+
+/******************* TEMPLATE TEKST (BÅDE I LOOPVIEW OG MINI VIEW) ALTSÅ TITEL OG PRIS ***************/
+.template-tekst {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+
+.titel,
+.pris {
+  font-size: 16px;
+  font-family: var(--generalText);
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  line-height: 1;
+}
+/******************* TEMPLATE TEKST (BÅDE I LOOPVIEW OG MINI VIEW) ALTSÅ TITEL OG PRIS SLUT ***************/
+
+/******************* MINI VIEW H2 LIGNENDE PRODUKTER ***************/
+#h2_lignende {
+  text-align: center;
+  font-size: 35px;
+  font-family: var(--generalText);
+  color: var(--secondary);
+  margin-bottom: 5rem;
+  font-weight: 300;
+}
+
+/******************* TILFØJ TIL KURV KNAP PÅ SINGLEVIEW ***************/
+
+/***** styling *****/
+.tekst_boks_produkter {
+  background-color: var(--third);
+  margin-block: 2rem;
+  padding-block: 2rem;
+}
+
+/***** styling *****/
+.tekst_boks_produkter h1 {
+  text-align: center;
+  margin: 0rem;
+  font-family: var(--generalText);
+  padding-inline: 3rem;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+}
+
+/***** styling *****/
+.tekst_boks_produkter p {
+  text-align: center;
+  margin: 0rem;
+  font-family: var(--secondary);
+  padding-inline: 3rem;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  font-weight: 300;
+}
+
+#artikel_single {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 5rem;
+  width: 100%;
+  padding-inline: 2rem;
+  padding-top: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  background-color: #f2efeca8;
+}
+/*********** MINI TABLET *************/
+@media (min-width: 640px) {
+  /* popup produkter tilrettes i media query */
+  #popup_produkter {
+    position: fixed;
+    top: 58rem;
+    right: 6rem;
+  }
+
+  #artikel_single {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titel_single {
+    margin-top: 1rem;
+  }
+
+  .breadcrumb {
+    margin-left: 4rem;
+  }
+}
+
+/******* TABLET ********/
+@media (min-width: 700px) {
+  /* popup produkter tilrettes i media query */
+  #popup_produkter {
+    position: fixed;
+    top: 55rem;
+    right: 9rem;
+  }
+
+  /******************* ARTIKEL_SINGLE BRØDKRUMME ***************/
+  .breadcrumb {
+    margin-left: 8rem;
+  }
+
+  /******************* ARTIKEL_SINGLE SINGLEVIEW ***************/
+  .tekst_boks_produkter h1 {
+    font-size: 52px;
+  }
+
+  #artikel_single {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .div_single {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .titel_single {
+    margin-top: 1rem;
+  }
+
+  .pic_single {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/*********** MINI TABLET *************/
+@media (min-width: 800px) {
+  /* popup produkter tilrettes i media query */
+  #popup_produkter {
+    position: fixed;
+    top: 13rem;
+    right: 8rem;
+  }
+
+  .titel_single {
+    margin-top: 0rem;
+  }
+}
+
+/******* DESKTOP ********/
+@media (min-width: 1100px) {
+  /* popup produkter tilrettes i media query */
+  #popup_produkter {
+    top: 12rem;
+    right: 7rem;
+  }
+  #produkter-oversigt,
+  #andre_produkter {
+    margin-inline: 6rem;
+  }
+
+  .tekst_boks_produkter h1 {
+    font-size: 55px;
+  }
+
+  /******************* CURSOR PÅ BILLEDE PÅ LOOPVIEW ***************/
+  .image {
+    cursor: pointer;
+  }
+
+  .dropdown-content-first {
+    margin-left: 10rem;
+  }
+
+  /****************** MARGIN **************/
+  #main {
+    margin-bottom: 10rem;
+  }
+
+  .hero_overskrift {
+    padding-inline: 15rem;
+    margin-top: 5rem;
+  }
+
+  .image_overlay {
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+  }
+
+  .image_overlay:hover {
+    opacity: 1;
+  }
+
+  .produkt_tilføj {
+    width: 100px;
+  }
+
+  /* Dropdown Button */
+  .dropbtn-categori,
+  .dropbtn-kategori,
+  .dropbtn-kategori2 {
+    padding-inline: 20px;
+    padding-block: 10px;
+  }
+
+  .dropbtn-categori {
+    margin-left: 10rem;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content div:hover {
+    background-color: #becdda;
+    color: white;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #becdda;
+  }
+
+  .dropdown:hover .dropbtn-argang {
+    background-color: #becdda;
+  }
+
+  /********** SINGLEVIEW ***********/
+  .breadcrumb {
+    gap: 2rem;
+    margin-left: 22rem;
+  }
+
+  #artikel_single {
+    width: 70%;
+    padding-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .div_single {
+    padding-block: 6rem;
+    padding-right: 4rem;
+    padding-left: 1rem;
+  }
+
+  .titel_single {
+    margin-top: 0rem;
+  }
+
+  .pic_single {
+    padding-right: 1rem;
+    padding-left: 4rem;
+    padding-block: 6rem;
+  }
+
+  .tekst_boks_produkter p {
+    font-size: 18px;
+    font-weight: 300;
+    padding-inline: 29rem;
+  }
+
+  .specifikationer_dropdown,
+  .div_single,
+  .levering_dropdown {
+    font-size: 15px;
+  }
+}
